@@ -1,0 +1,138 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+.details_protection_background{
+	height: 810px;
+	max-width: 100%;
+	background-size: cover;
+	padding: 80px 7.7% 60px;
+	h5{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #E7E9ED;
+		margin-bottom: 8px;
+	}
+	h2{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 120%;
+		text-align: center;
+		color: $white-color;
+		margin-bottom: 8px;
+	}
+	p{
+		font-family: $Open_Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+		color: #E7E9ED;
+		margin-bottom: 32px;
+	}
+	.h2_large{
+		display: none;
+	}
+	.h5_large{
+		display: none;
+	}
+	.p_large{
+		display: none;
+	}
+	.details_protection_flex{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		img{
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 16px;
+		}
+	}
+	@include respond-to(medium) {
+		height: 600px;
+		max-width: 100%;
+		background-repeat: no-repeat;
+		h5{
+			font-size: 18px;
+			padding-top: 20px;
+			margin-bottom: 16px;
+		}
+		h2{
+			font-size: 48px;
+			margin-bottom: 16px;
+		}
+		p{
+			font-size: 16px;
+			max-width: 480px;
+			margin: 0 auto;
+		}
+		.details_protection_flex{
+			flex-direction: row;
+			margin-top: 60px;
+			justify-content: space-between;
+			h2{
+				font-size: 38px;
+			}
+		}
+	}
+	@include respond-to(large) {
+		height: 780px;
+		max-width: 100%;
+		.text_block{
+			display: block;
+		}
+		.h2_medium{
+			display: none;
+		}
+		.h2_large{
+			display: block;
+			text-align: start;
+			font-size: 48px;
+			text-align: center;
+			margin-bottom: 16px;
+		}
+		.h5_medium{
+			display: none;
+		}
+		.h5_large{
+			display: block;
+			text-align: start;
+			font-size: 18px;
+			text-align: center;
+			margin-bottom: 16px;
+		}
+		.p_medium{
+			display: none;
+		}
+		.p_large{
+			display: block;
+			text-align: start;
+			font-size: 16px;
+			margin: 0 auto;
+			max-width: 600px;
+			margin-bottom: 60px;
+		}
+		.details_protection_flex{
+			flex-direction: row;
+			justify-content: space-between;
+			h2{
+				font-size: 38px;
+			}
+		}
+	}
+	@media only screen and (min-width: 1920px) {
+		.text_block{
+			display: none;
+		}
+	}
+}

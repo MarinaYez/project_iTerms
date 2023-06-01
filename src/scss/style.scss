@@ -1,0 +1,23 @@
+@import '../mixins/mixins.scss';
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html {
+  background-color: #f1f3f6;
+}
+body {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.background {
+  background-image: none;
+  @include respond-to(large) {
+    background-image: var(--background-image);
+    background-size: 1920px 826px;
+    background-repeat: no-repeat;
+  }
+}

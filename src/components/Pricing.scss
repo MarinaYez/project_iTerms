@@ -1,0 +1,615 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+
+.pricing-conteiner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 92%;
+  margin: 23px auto 0;
+  bottom: -24px;
+  @include respond-to (medium) {width: 89%;}
+  @include respond-to (large) {
+    position: relative;
+    bottom: -44px;
+    z-index: 1;
+    max-width: 1110px;
+    margin: 84 auto 0;
+  }
+  .pricing-conteiner__flexible{
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B6BFD9;
+    @include respond-to (medium) {
+      font-size: 18px;
+    }
+    @include respond-to (large) {
+      font-size: 18px;
+    }
+  }
+  .pricing-conteiner__title{
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 300;
+    color: $text-color;
+    font-size: 32px;
+    text-align: center;
+    @include respond-to (medium) {
+      font-size: 64px;
+    }
+    @include respond-to (large) {
+      font-size: 64px;
+    }
+  }
+  .pricing-conteiner__no_contracts{
+    font-family: $Open_Sans;
+    font-style: normal;
+    font-weight: 400;
+    color: $text-color;
+    font-size: 16px;
+    @include respond-to (medium) {
+      font-size: 24px;
+      font-family: $Poppins;
+    }
+    @include respond-to (large) {
+      font-size: 24px;
+      font-family: $Poppins;
+    }
+  }
+  .group_swich {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position:relative;
+    flex-direction:row;
+    margin: 16px auto 0;
+    @include respond-to (medium) {
+    }
+    @include respond-to (large) {
+      margin: 60px auto 0;
+    }
+    .group_swich__month{
+      font-family: $Open_Sans;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: $text-color;
+      font-size: 16px;
+      &.folowing{
+        color: $bkog-paragraph;
+      }
+    }
+    .swich_box{
+      display: flex;
+      align-items: center;
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 20px;
+      }
+      .toggle-switch input {
+        display: none;
+      }
+      .toggle-switch .switch {
+        position: absolute;
+        cursor: pointer;
+        background-color: #ccc;
+        border-radius: 25px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: background-color 0.2s ease;
+      }
+      .toggle-switch .switch::before {
+        position: absolute;
+        content: "";
+        left: 2px;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        background-color: #aaa;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+      .toggle-switch {
+        input {
+          &:checked {
+            + {
+              .switch {
+                &::before {
+                  transform: translateX(14px);
+                  background-color: whitesmoke;
+                }
+              }
+            }
+          }
+        }
+      }
+      .toggle-switch {
+        input {
+          &:checked {
+            + {
+              .switch {
+                background-color: $Iterms-button;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pricing-conteiner__most_popular{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+      background: rgba(50, 217, 137, 0.1);
+      border-radius: 8px 8px 0px 0px;
+      margin-top: 24px;
+      width: 100%;
+      @include respond-to (medium) {
+        margin: 60px 0 0 10%;
+        width: 30%;
+      }
+      @include respond-to (large) {
+        margin: 60px 0 0 1%;
+        width: 33%;
+      }
+      p {
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #32D989;
+      }
+    }
+  .table{
+    background-color: transparent;
+    width: 100%;
+    @include respond-to(medium){
+      position: relative;
+      background-color: $white-color;
+      box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+    }
+    @include respond-to(large){
+      padding-bottom: 76px;
+      position: relative;
+      background-color: $white-color;
+      box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+    }
+    .overlay_first{
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 33%;
+        height: 100%;
+        z-index: 3;
+        right: 33%;
+        background-color: #f1f3f6;
+        opacity: 0.2;
+        pointer-events: none;
+        @include respond-to(medium) {
+          width: 30%;
+          right: 30%;
+          display: inline;
+        }
+        @include respond-to(large) {
+          display: inline;
+        }
+      }
+      .overlay_sekond{
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 33%;
+        height: 100%;
+        z-index: 3;
+        right: 0;
+        background-color: #f1f3f6;
+        opacity: 0.2;
+        pointer-events: none;
+        @include respond-to(medium) {
+          width: 30%;
+          display: inline;
+        }
+        @include respond-to(large) {
+          display: inline;
+         }
+      }
+      .overlay{
+        display: none;
+        box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+        pointer-events: all;
+        background-color: transparent;
+        opacity: 1;
+        height: 97%;
+        @include respond-to(medium) {
+          display: inline;
+        }
+        @include respond-to(large) {
+          display: inline;
+        }
+      }
+    .tarifs{
+      @include respond-to (medium) {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include respond-to (large) {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .tarifs__credit_card{
+        display: none;
+        @include respond-to (medium) {
+          display: inline;
+          position: absolute;
+          bottom: 64px;
+          width: 264px;
+          left: -41px;
+          z-index: 2;
+        }
+        @include respond-to (large) {
+          display: inline;
+          position: absolute;
+          bottom: 100px;
+          width: 38%;
+          left: -103px;
+          z-index: 2;
+        }
+      }
+      .bottom-svg {
+        display: none;
+        @include respond-to (medium) {
+          display: inline;
+          position: absolute;
+          bottom: 0;
+          left: -35px;
+        }
+        @include respond-to (large) {
+          display: inline;
+          position: absolute;
+          bottom: 0;
+          left: -35px;
+        }
+      }
+      .tarif{
+        position: relative;
+        padding: 52px 0 32px;
+        height: auto;
+        z-index: 1;
+        background-color: $white-color;
+        margin-bottom: 15px;
+        @include respond-to(medium) {
+          width: 30%;
+        }
+        @include respond-to(large) {
+          width: 33%;
+        }
+        .tarif__desc{
+          font-family: $Open_Sans;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          color: $bkog-paragraph;
+          margin: 32px 0 0 24px ;
+          width: auto;
+          padding: 4px 8px 5px;
+          background: rgba(182, 191, 217, 0.12);
+          border-radius: 4px;
+          @include respond-to (medium) {
+            margin-top: 48px;
+          }
+          @include respond-to (large) {
+            margin-top: 48px;
+          }
+        }
+        .tarif__name0{
+          margin: 8px 0 0 24px;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 32px;
+          color: #3EDE91;
+          @include respond-to(medium){font-size: 38px;}
+          @include respond-to(large){font-size: 38px;}
+        }
+        .tarif__name1{
+          margin: 8px 0 0 24px;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 32px;
+          color: $Iterms-button;
+          @include respond-to(medium){font-size: 38px;}
+          @include respond-to(large){font-size: 38px;}
+        }
+        .tarif__cost{
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 32px;
+          color: $text-color;
+          margin: 36px 0 0 24px;
+          @include respond-to(medium) {
+            font-size: 48px;
+            margin-top: 18px;
+          }
+          @include respond-to(large) {
+            font-size: 48px;
+            margin-top: 18px;
+          }
+          .tarif__cur{
+            font-weight: 400;
+            font-size: 18px;
+            vertical-align: 75%;
+            @include respond-to(medium) {
+              font-size: 24px;
+              vertical-align: 100%;
+            }
+            @include respond-to(large) {
+              font-size: 24px;
+              vertical-align: 100%;
+            }
+          }
+          .tarif__period{
+            font-family: $Poppins;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #8B94AD;
+            @include respond-to(medium) {
+              font-size: 18px;
+            }
+            @include respond-to(large) {
+              font-size: 18px;
+            }
+          }
+        }
+        .tarif__choice{
+          border: 1px solid #897EFF;
+          border-radius: 8px;
+          background: none;
+          // margin: 16px 0 0 24px;
+          padding: 12px 32px;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #897EFF;
+          @include respond-to (medium) {
+            // margin: 24px 0 0 24px;
+            padding: 12px 17px;
+          }
+          @include respond-to (large) {
+            // margin: 24px 0 0 24px;
+            padding: 12px 32px;
+          }
+        }
+        .active_button{
+          background-color: $Iterms-button;
+          color: $white-color;
+        }
+        .tarif__link_for_table{
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: $text-color;
+          margin: 32px 0 0 24px;
+          cursor: pointer;
+          @include respond-to (medium) {
+            display: none;
+          }
+          @include respond-to (large) {
+            display: none;
+          }
+          span{
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease;
+    
+            &::after{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 8px;
+                background-color: #32D989;
+                bottom: 1px;
+                right: -7px;
+                transform: rotate(-45deg);
+            }
+    
+            &::before{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 8px;
+                background-color: #32D989;
+                bottom: 1px;
+                right: -12px;
+                transform: rotate(45deg);
+            }
+    
+            &.isOpen {
+                transform: rotateX(180deg);
+                bottom: 10px;
+                right: 0px;;
+                transition: transform 0.1s;
+            }
+          }
+        }
+      }
+      .tarif0{
+        position: relative;
+        box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+        border-radius: 0 0 8px 8px;
+        @include respond-to (medium) {
+          box-shadow: none;
+          border-radius: none;
+        }
+        @include respond-to (large) {
+          box-shadow: none;
+          border-radius: none;
+        }
+         hr{
+            border: none;
+            border-top: 1px solid #B6BFD9;
+            width: 90%;
+            margin: 32px auto 0;
+            @include respond-to(medium){
+              position: absolute;
+              left: -127%;
+              width: 319%;
+            }
+            @include respond-to(large){
+              width: 93%;
+              margin: 48px 0 0 24px;
+            }
+          }
+      }
+      .tarif1{
+        box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+        border-radius: 8px;
+        @include respond-to (medium) {
+          box-shadow: none;
+          border-radius: none;
+        }
+        @include respond-to (large) {
+          box-shadow: none;
+          border-radius: none;
+        }
+        hr{
+          border: none;
+          border-top: 1px solid #B6BFD9;
+          width: 90%;
+          margin: 32px auto 0;
+          @include respond-to(medium){display: none;}
+          @include respond-to(large){
+            width: 93%;
+            margin: 48px 24px 0 0px;
+          }
+        }
+      }
+      .tarif__table{
+        margin: 32px auto 0 24px;
+        @include respond-to (medium) {
+        display: none;
+        }
+        @include respond-to (large) {
+          display: none;
+        }
+        .tarif__table_title{
+          // margin-bottom: 24px;
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          color: $text-color;
+        }
+        .tarif__table_list{
+          .tarif__table_item{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 24px auto;
+            font-family: $Open_Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: $bkog-paragraph;
+          }
+        }
+      }
+    }
+    .max_table {
+      display: none;
+      @include respond-to (medium) {
+        display: table;
+        border-collapse: collapse;
+        margin: 0 24px;
+        width: 95%;
+      }
+      @include respond-to (large) {
+        display: table;
+        border-collapse: collapse;
+        margin: 0 24px;
+        width: 95%;
+      }
+    }
+    th {
+      font-family: $Poppins;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: $text-color;
+      text-align: left;
+      padding: 52px 0 12px;
+    }
+    tr {
+      display: flex;
+      font-family: $Open_Sans;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: $bkog-paragraph;
+      &:nth-child(even) {
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -khtml-border-radius: 8px;
+        background-color: rgba(182, 191, 217, 0.12);;
+      }
+    }
+    td {
+      display: flex;
+      align-items: center;
+       @include respond-to (medium) {
+        width: 33%;
+      }
+      @include respond-to (large) {
+        width: 33%;
+      }
+      img{
+        width: 24px;
+        margin-left: 4px;
+      }
+    }
+    .context{
+      padding: 12px 0 12px 24px;
+      width: 270px;
+       @include respond-to (medium) {
+        font-size: 91%;
+      }
+      @include respond-to (large) {
+      
+      }
+    }
+    .include{
+      justify-content: center;
+      // max-width: 24px;
+      @include respond-to (medium) {
+       padding-left: 13%;
+      
+      }
+      @include respond-to (large) {
+        padding-left: 14%;
+      }
+    }
+  }
+}

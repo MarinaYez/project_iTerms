@@ -1,0 +1,244 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+.swiper_title{
+	padding: 0 15px;
+	h5{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #B6BFD9;
+		margin-top: 65px;
+	}
+	h2{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 120%;
+		color: $text-color; 
+		margin: 8px 0;
+	}
+	p{
+		font-family: $Open_Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: $bkog-paragraph;
+		margin-bottom: 110px;
+	}
+	.h2_large{
+		display: none;
+	}
+	.h5_large{
+		display: none;
+	}
+	.p_large{
+		display: none;
+	}
+}
+.swiper_background{
+	margin: 0 3% 60px;
+	height: 475px;
+	background-color: #F9FAFC;
+	border-radius: 8px;
+	box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 
+	0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 
+	0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute !important;
+		top: 465px !important;
+		color: $text-color !important;
+	}
+	.swiper-button-next:after, 
+	.swiper-button-prev:after {
+		font-family: swiper-icons;
+		font-size: 19px !important;
+		letter-spacing: 0;
+		font-variant: initial;
+		line-height: 1;
+	}
+	.swiper-button{
+		position: absolute !important;
+		width: 96px !important;
+		right: 50px;
+	}
+	.swiper-wrapper{
+		height: 480px !important;
+	}
+	.swiper,.swiper-container{
+		overflow: visible !important;
+	}
+}
+.swiper_body{
+	position: relative;
+	top: -50px;
+}
+.swiper_slide{
+	padding: 32px 24px 20px 24px;
+	max-width: 255px;
+	max-height: 426px;
+	background-color: $white-color;
+	border-radius: 8px;
+	box-shadow: 
+	20px 8px 27px rgba(191, 204, 225, 0.39), 
+	0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 
+	0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+	h5{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 120%;
+		color: $text-color;
+		margin: 16px 0;
+	}
+	p{
+		font-family: $Open_Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: $bkog-paragraph;
+		margin-bottom: 24px;
+		min-height: 120px;
+	}
+	.generate{
+		display: inline-block;
+		padding: 12px 66px;
+		border-radius: 8px;
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		position: relative;
+		transition: 0.5s;
+		margin-bottom: 5px;
+		background: $Iterms-button;
+		color: $white-color;
+		text-decoration: none;
+	}
+	.learn_more{
+		display: block;
+		padding: 12px 61px 12px 54px;
+		border-radius: 8px;
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: $text-color;
+		position: relative;
+		transition: 0.5s;
+		text-decoration: none;
+		&::after{
+			content: '';
+			width: 2px;
+			height: 8px;
+			transform: rotate(45deg);
+			background: #32D989;
+			position: absolute;
+			top: 23px;
+			left: 155px;
+		}
+
+		&::before{
+			content: '';
+			width: 2px;
+			height: 8px;
+			transform: rotate(-45deg);
+			background: #32D989;
+			position: absolute;
+			top: 19px;
+			left: 155px;
+		}
+	}
+	@include respond-to(large) {
+		h5{
+			font-size: 24px;
+		}
+	}
+}
+.swiper_title{
+	@include respond-to(medium) {
+		h5{
+			font-size: 18px;
+		}
+
+		h2{
+			font-size: 48px;
+			max-width: 540px;
+		}
+
+		p{
+			font-size: 16px;
+			max-width: 350px;
+		}
+	}
+}
+.swiper_background{
+	@include respond-to(medium) {
+		margin-bottom: 90px;
+		box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+		border-radius: 8px;
+		.swiper_body{
+			padding: 0;
+		}
+	}
+}
+.swiper_title{
+	@include respond-to(large) {
+		max-width: 960px;
+		margin: 0 auto;
+		.h2_medium{
+			display: none;
+		}
+		.h2_large{
+			display: inline-block;
+			font-size: 48px;
+			max-width: 350px;
+			margin-right: 200px;
+		}
+		.h5_medium{
+			display: none;
+		}
+		.h5_large{
+			display: block;
+			font-size: 18px;
+		}
+		.p_medium{
+			display: none;
+		}
+		.p_large{
+			display: inline-block;
+			font-size: 16px;
+			max-width: 310px;
+		}
+	}
+}
+.swiper_background{
+	@include respond-to(large) {
+		margin: 0 auto;
+		max-width: 900px;
+		margin-bottom: 152px;
+		box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+		border-radius: 8px;
+		.swiper_body{
+			max-width: 825px;
+			margin: 0 auto;
+		.swiper{
+			:nth-child(2){
+					p{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

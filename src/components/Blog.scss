@@ -1,0 +1,245 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+
+.custom-bullet{
+  cursor: pointer;
+  margin: 5px;
+}
+.blog_section{
+  @include respond-to (large){
+    height: auto;
+    height: 2066px;
+  }
+  .swiper-pagination {
+    @include respond-to(medium) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include respond-to(large) {
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #B6BFD9 !important;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+    @include respond-to(medium) {
+      }
+    @include respond-to(large) {
+      display: block !important;
+      top: 98.4% !important;
+      width: 16px !important;
+      height: 16px !important;
+      color: #32D989 !important;
+      margin: 0 10px;
+      font-weight: 700;
+      background: none !important;
+      border: none !important;
+      }
+  }
+
+  .swiper-button-prev {
+    left: 43% !important;
+  }
+  .swiper-button-next {
+    right: 43% !important;
+  }
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
+      font-family: swiper-icons;
+      font-size: 14px !important;
+      letter-spacing: 0;
+      font-variant: initial;
+      line-height: 1;
+  }
+}
+.header_for_blog {
+  margin-top: 64px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include respond-to(medium) {
+    margin-top: 96px;
+    margin-bottom: 45px;
+  }
+  @include respond-to(large) {
+    margin-top: 128px;
+    margin-bottom: 60px;      
+  }
+  
+  h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #B6BFD9;
+    @include respond-to(medium) {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    @include respond-to(large) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    color: $text-color;
+    @include respond-to(medium) {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+    @include respond-to(large) {
+      font-size: 64px;
+      margin-bottom: 16px;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    color: $text-color;
+    max-width: 75%;
+    text-align: center;
+    @include respond-to(large) {
+      font-size: 20px;
+    }
+    @include respond-to(large) {
+      font-size: 24px;
+      max-width: 743px;
+    }
+  }
+}
+
+.blog {
+  margin: 0 auto;
+  max-width: 75%;
+  height: auto;
+  @include respond-to(medium) {
+    position: static;
+    left: auto;
+  }
+  @include respond-to(large) {
+    position: absolute;
+    right: 1%;
+    max-width: 825px;
+    height: 1866px;
+  }
+}
+
+.posts {
+  border-radius: 8px;
+  @include respond-to(large) {
+      width: 100%;
+      height: auto;
+    }
+  .post {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    @include respond-to(medium) {
+      height: auto;
+      gap: 12px;
+      min-height: 350px;
+    }
+    @include respond-to(large) {
+      width: 255px;
+      height: 444px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 16px;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px 8px 0px 0px
+    }
+
+    h3 {
+      font-size: 18px;
+      font-family: $Poppins;
+      font-style: normal;
+      font-weight: 400;
+      color: $text-color;
+      @include respond-to(medium) {
+        font-size: 20px;
+      }
+      @include respond-to(large) {
+        font-size: 24px;
+        line-height: 120%;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-family: $Open_Sans;
+      font-style: normal;
+      font-weight: 400;
+      color: $bkog-paragraph;
+      @include respond-to(medium) {
+        font-size: 14px;
+      }
+      @include respond-to(large) {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-family: $Poppins;
+      font-style: normal;
+      font-weight: 400;
+      color: $text-color;
+      text-decoration: none;
+      @include respond-to(large) {
+        display: flex;
+        font-size: 16px;
+        line-height: 150%;
+      }
+      @include respond-to(large) {
+        display: flex;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      img {
+        width: 16px;
+        height: 16px;
+        @include respond-to(large) {
+          width: 16px;
+          height: 16px;
+        }
+        @include respond-to(large) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+

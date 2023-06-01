@@ -1,0 +1,66 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == medium {
+    @media (min-width: 512px) and (max-width: 1023px){
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+@mixin learn{
+  display: block;
+  padding: 12px 61px 12px 54px;
+  background: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #1D212A;
+  position: relative;
+  transition: 0.5s;
+  border: none;
+  cursor: pointer;
+
+  &::after{
+    content: '';
+    width: 2px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #32D989;
+    position: absolute;
+    top: 23px;
+    left: 155px;
+  }
+  &::before{
+    content: '';
+    width: 2px;
+    height: 8px;
+    transform: rotate(-45deg);
+    background: #32D989;
+    position: absolute;
+    top: 19px;
+    left: 155px;
+  }
+}
+@mixin generate{
+  display: inline-block;
+  padding: 12px 66px;
+  border-radius: 8px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 5px;
+  background: #8770FF;
+  color: #fff;
+  cursor: pointer;
+}
+
+

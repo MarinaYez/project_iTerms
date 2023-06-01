@@ -1,0 +1,234 @@
+@import '../../mixins/mixins.scss';
+@import '../../globals/globals.scss';
+
+.section_swiper {
+	.swiper-button-prev,
+	.swiper-button-next {
+		position: absolute !important;
+		top: 465px !important;
+		color: #1D212A !important;
+	}
+	.swiper-button-next:after, 
+	.swiper-button-prev:after {
+		font-family: swiper-icons;
+		font-size: 19px !important;
+		letter-spacing: 0;
+		font-variant: initial;
+		line-height: 1;
+	}
+	.swiper-button{
+		position: absolute !important;
+		width: 120px !important;
+		right: 120px;
+	}
+	.swiper,.swiper-container{
+		overflow: visible !important;
+	}
+	.swiperPost_title{
+		display: flex;
+		flex-direction: column;
+		h5{
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 150%;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #B6BFD9;
+		}
+		h2{
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 120%;
+			color: #1D212A; 
+		}
+		p{
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #565A65;
+		}
+		.description{
+			max-width: 284px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include respond-to (medium) {
+				justify-content: center;
+				flex-direction: row;
+				max-width: 100%;
+			}
+		}
+		.h2_postlarge{
+			font-size: 24px;
+			@include respond-to (medium) {
+				font-weight: 300;
+				font-size: 48px;
+				line-height: 120%;
+			}
+		}
+		.p_postlarge{
+			@include respond-to (medium) {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 150%;
+			}
+		}
+		.h5_postlarge{
+			text-align: inherit;
+			display:flex;
+			z-index: 5;
+			padding-top: 80px;
+		}
+		.p_postlarge span{
+			word-break: break-all;
+		}
+		.swiperPost_title_image{
+			width: 194px;
+			height: 214px;
+			position: absolute;
+			z-index: -1;
+		}
+	}
+	.swiperPost_background{
+		margin: 0 90px;
+		margin-top:100px;
+		height: 440px;
+		background-color: #F9FAFC;
+		border-radius: 8px;
+	}
+	.swiperPost_body{
+		position: relative;
+		top: -90px;
+		right: -50px;
+	}
+	.swiper_slide_image img{
+		border-radius: 50%;
+		padding-right: 4%;
+		width:84px;
+		height:84px;
+	}
+	.swiper_slide_posts {
+		align-items: flex-start;
+		max-height: 120px;
+	}
+	.swiper_slide_post{
+		.stars {
+			display: flex;
+			.star {
+				color: #ddd;
+				margin-right: 5px;
+				cursor: pointer;
+				&:last-child {
+					margin-right: 0;
+				}
+				&.filled {
+					color: green;
+				}
+			}
+		}
+	}
+		
+	.swiper_slidePost{
+		padding: 34px 24px 20px 24px;
+		max-width: 430px;
+		max-height: 370px;
+		background-color: #FFFFFF;
+		border-radius: 8px;
+		position: relative;
+		h5{
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 120%;
+			color: #1D212A;
+			margin: 16px 0;
+		}
+		p{
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: #565A65;
+			flex-grow: 1;
+			min-height: 120px;
+		}
+	}
+	.swiper_slide_main{
+		display: flex;
+		flex-direction: row;
+		max-height: 120px;
+	}    
+	.swiper_slide_post h4{
+		font-family: 'Open Sans';
+		font-size: 16px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left; 
+	}
+	.swiper_slide_posts{
+		display: flex;
+		flex-direction: column;
+	}
+	.swiperPost_title{
+		@include respond-to(medium) {
+			max-width: 89%;
+			margin: 0 auto;
+			h5{
+				font-size: 18px;
+			}
+			h2{
+				font-size: 48px;
+				max-width: 540px;
+			}
+			p{
+				font-size: 16px;
+				max-width: 350px;
+			}
+		}
+	}
+	.swiperPost_background{
+		@include respond-to(medium) {
+			margin-bottom: 180px;
+			.swiper_body{
+				padding: 0;
+			}
+		}
+	}
+	.swiperPost_background {
+		@include respond-to(large) {
+			max-width: 960px;
+			margin-bottom: 180px;
+			.swiperPost_body {
+				max-width: 800px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.swiperPost_title {
+		@include respond-to(large) {
+			.description {
+				display: flex;
+				flex-direction: row;
+				max-width:45%;
+				margin: 0 0 60px 4%;
+				.h2_postlarge {
+					width: 33%;
+					font-size: 32px;
+				}
+				.p_postlarge{
+					width: 33%;
+				}
+			}
+		}
+	}
+}  

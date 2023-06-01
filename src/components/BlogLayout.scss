@@ -1,0 +1,128 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+.blog_layout {
+  @include respond-to(large) {
+    max-width: 1100px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+
+  }
+    .sidebar {
+      margin: 0 auto 16px;
+      max-width: 75%;
+      background-color: #dfe3e9;
+      border-radius: 8px;
+      box-shadow:  -8px 8px 16px #d9d9d9,
+          8px -8px 16px #e7e7e7;
+      @include respond-to(medium) {
+        width: 90%;
+        margin: 0 auto 16px;
+        background: none;
+        border-radius: none;
+        box-shadow: none;
+      }
+      @include respond-to(large) {
+        position: absolute;
+        left: 1%;
+        background: none;
+        border-radius: none;
+        box-shadow: none;
+      }
+        h2 {
+          font-family: $Poppins;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 120%;
+          color: $text-color;
+          text-align: center;
+          cursor: pointer;
+          @include respond-to(medium) {
+            background: none;
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+          @include respond-to(large) {
+            text-align: start;
+            background: none;
+            margin-bottom: 24px;
+          }
+        }
+        ul {
+          padding: 5px;
+          list-style-type: none;
+          text-align: center;
+          @include respond-to(medium) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: none;
+            overflow: hidden;
+            padding: 0;
+          }
+          @include respond-to(large) {
+            text-align: start;
+            background: none;
+            padding: 0;
+          }
+          li {
+              margin-bottom: 8px;
+            @include respond-to(medium) {
+              float: left;
+              border-radius: 8px;
+              background: linear-gradient(225deg, #f0f0f0, #cacaca);
+            }
+            @include respond-to(large) {
+              background: none;
+              margin-bottom: 8px;
+            }
+            .link_category {
+              font-family: $Open_Sans;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 150%;
+              color: $text-color;
+              text-decoration: none;
+              padding: 2px;
+              border-radius: 8px;
+              background: linear-gradient(225deg, #f0f0f0, #cacaca);
+              @include respond-to(medium) {
+                display: block;
+                text-align: center;
+                font-size: 12px;
+                padding: 8px;
+                background: none
+              }
+              @include respond-to(large) {
+                font-size: 16px;
+                background: none
+              }
+            }
+            .menu_link_active{
+                font-family: $Open_Sans;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                text-decoration: none;
+                color: $Iterms-button;
+                @include respond-to(medium) {
+                  display: block;
+                  text-align: center;
+                  padding: 8px;
+                }
+            }
+          }
+        }
+  }
+  .content {
+    @include respond-to(large) {
+      width: 75%;
+    }
+  }
+}
+

@@ -1,0 +1,253 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+.sign_in_container {
+    display: flex;
+    width: 89%;
+    margin: 32px auto 15px;
+    background-color: $white-color;
+    border-radius: 8px;
+    box-shadow: 0px 38px 56px rgba(191, 204, 225, 0.39), 0px 20.7957px 15.3272px rgba(191, 204, 225, 0.177553), 0px 15.8955px 0px rgba(191, 204, 225, 0.0372931);
+    @include respond-to (medium) {
+      width: 88%;
+      height: 84%;
+      margin: 32px auto 60px;
+      background-color: $Iterms-button;
+    }
+    @include respond-to (large) {
+      width: 57%;
+      height: 75%;
+      margin: 132px auto 70px;
+      background-color: $Iterms-button;
+    }
+
+  .form_container {
+    width: 330px;
+    height: 100%;
+    border-radius: 8px;
+    margin: 32px auto;
+    @include respond-to (medium) {
+      margin: 0;
+      background: $white-color;
+      width: 299px;
+      border-radius: 8px 0 0 8px;
+    }
+    @include respond-to (large) {
+      margin: 0;
+      background: $white-color;
+      width: 465px;
+      border-radius: 8px 0 0 8px;
+    }
+
+
+    .form_details {
+        display: flex;
+        flex-direction: column;
+      width: 281px;
+      margin: 0 auto;
+      @include respond-to (medium) {
+        margin: 60px auto 238px 25px;
+        width: 251px;
+      }
+      @include respond-to (large) {
+        margin: 45px auto 45px 95px;
+        width: 250px;
+      }
+
+      h2 {
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: $text-color;
+        margin-bottom: 32px;
+        @include respond-to (medium) {
+          margin-bottom: 48px;
+          font-size: 24px;
+        }
+        @include respond-to (large) {
+            order: -2;
+          margin-bottom: 48px;
+          font-size: 24px;
+        }
+        
+      }
+      .or {
+        display: none;
+        font-family: $Open_Sans;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        text-align: center;
+        color: $bkog-paragraph;
+        @include respond-to (large) {
+            display: block;
+            margin-bottom: 16px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-family: $Open_Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 120%;
+            color: $bkog-paragraph;
+            margin-bottom: 8px;
+        }
+
+        input {
+          width: 281px;
+          height: 27px;
+          margin-bottom: 24px;
+          padding: 0;
+          border: none;
+          border-bottom: 1px solid #b6bfd9;
+          background: none;
+          outline: none;
+          @include respond-to (medium) {
+            width: 251px;
+          }
+          @include respond-to (large) {
+            width: 250px;
+          }
+
+          &::placeholder {
+            font-family: $Open_Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #DADFEB;
+          }
+
+          &:focus::placeholder {
+            color: transparent;
+          }
+        }
+      }
+
+      #sign_in {
+        width: 281px;
+        height: 48px;
+        margin-bottom: 24px;
+        font-family: $Poppins;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        background: #897eff;
+        border: none;
+        border-radius: 8px;
+        color: $white-color;
+        cursor: pointer;
+        @include respond-to (medium) {
+          width: 251px;
+        }
+        @include respond-to (large) {
+          width: 250px;
+        }
+      }
+
+      .sign_in_with {
+        display: flex;
+        flex-direction: column;
+        width: 281px;
+        height: 70px;
+        margin-bottom: 16px;
+        @include respond-to (medium) {
+          width: 251px;
+        }
+        @include respond-to (large) {
+            order: -1;
+          width: 250px;
+        }
+
+        h3 {
+            font-family: $Open_Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 120%;
+            color: $bkog-paragraph;
+            margin-bottom: 8px;
+            @include respond-to (large) {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+        }
+        .sign_in_with_but {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Open_Sans;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                color: $bkog-paragraph;
+                width: 137px;
+                height: 48px;
+                background: rgba(135, 112, 255, 0.1);
+                border-radius: 8px;
+                border: none;
+                  @include respond-to (medium) {
+                    width: 119px;
+                  }
+                  @include respond-to (large) {
+                    width: 119px;
+                  }
+                  .for_tab_sign_in {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 4px;
+                    
+                  }
+                }
+            }
+        }
+      }
+
+      .link_text_for_log_in {
+        font-family: $Open_Sans;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $bkog-paragraph;
+        a {
+            color: #897eff;
+            text-decoration: none;
+        }
+    }
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f44336;
+  color: $white-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  p {
+    font-family: $Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+  }
+}

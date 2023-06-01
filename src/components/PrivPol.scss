@@ -1,0 +1,250 @@
+@import '../mixins/mixins.scss';
+@import '../globals/globals.scss';
+
+.header_for_details {
+	margin-top: 128px;
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h4{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #B6BFD9;
+		margin-bottom: 8px;
+	}
+	h1{
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 120%;
+		text-align: center;
+		color: $text-color;
+		margin-bottom: 8px;
+	}
+	p{
+		font-family: $Open_Sans;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		text-align: center;
+		color: $bkog-paragraph;
+		max-width: 289px;
+		margin: 0;
+		padding: 0;
+	}
+	.p_large{
+		display: none;
+	}
+}
+.header_button_home{
+  display: none;
+}
+.header_button_details{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	bottom: 30px;
+	&_1{
+		display: inline-block;
+		width: 140px;
+		height: 48px;
+		border-radius: 8px;
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: $text-color;
+		text-align: center;
+		line-height: 48px;
+		text-decoration: none;
+		position: relative;
+		transition: 0.5s;
+		margin-right: 2%;
+	}
+	&_1::after{
+		content: '';
+		width: 2px;
+		height: 8px;
+		transform: rotate(45deg);
+		background: #32D989;
+		position: absolute;
+		top: 23px;
+		left: 118px;
+	}
+	&_1::before{
+		content: '';
+		width: 2px;
+		height: 8px;
+		transform: rotate(-45deg);
+		background: #32D989;
+		position: absolute;
+		top: 19px;
+		left: 118px;
+	}
+	&_1:hover{
+		background: $Iterms-button;
+		color: $white-color;
+		transition: 0.5s;
+		&::before{
+			display: none;
+		}
+		&::after{
+			display: none;
+		}
+	}
+	&_2{
+		display: inline-block;
+		width: 140px;
+		height: 48px;
+		border-radius: 8px;
+		font-family: $Poppins;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: $text-color;
+		text-align: center;
+		line-height: 48px;
+		text-decoration: none;
+		position: relative;
+	}
+	&_2::after{
+		content: '';
+		width: 2px;
+		height: 8px;
+		transform: rotate(45deg);
+		background: #32D989;
+		position: absolute;
+		top: 23px;
+		left: 123px;
+	}
+	&_2::before{
+		content: '';
+		width: 2px;
+		height: 8px;
+		transform: rotate(-45deg);
+		background: #32D989;
+		position: absolute;
+		top: 19px;
+		left: 123px;
+	}
+	&_2:hover{
+		background: $Iterms-button;
+		color: $white-color;
+		transition: 0.5s;
+		&::before{
+			display: none;
+		}
+		&::after{
+			display: none;
+		}
+	}
+}
+.header_for_details{
+	@include respond-to(medium) {
+		h4{
+			font-size: 18px;
+		}
+		h1{
+			font-size: 64px;
+		}
+		p{
+			font-size: 24px;
+			max-width: 450px;
+		}
+	}
+}
+.header_for_details{
+	@include respond-to(large) {
+		h4{
+			font-size: 18px;
+		}
+		h1{
+			font-size: 64px;
+		}
+		p{
+			max-width: 730px;
+			font-family: $Poppins;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 120%;
+			text-align: center;
+			color: $text-color;
+		}
+		.p_medium{
+			display: none;
+		}
+		.p_large{
+			display: initial;
+			max-width: 730px;
+		}
+	}
+}
+.header_button_home{
+	@include respond-to(large) {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		top: -40px;
+		&_1{
+			display: inline-block;
+			width: 140px;
+			height: 48px;
+			border-radius: 8px;
+			font-family: $Poppins;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+			color: $text-color;
+			text-align: center;
+			line-height: 48px;
+			text-decoration: none;
+			transition: 0.5s;
+			position: relative;
+		}
+		&_1::after{
+			content: '';
+			width: 2px;
+			height: 8px;
+			transform: rotate(45deg);
+			background: #32D989;
+			position: absolute;
+			top: 23px;
+			left: 135px;
+		}
+		&_1::before{
+			content: '';
+			width: 2px;
+			height: 8px;
+			transform: rotate(-45deg);
+			background: #32D989;
+			position: absolute;
+			top: 19px;
+			left: 135px;
+		}
+		&_1:hover{
+			background: $Iterms-button;
+			color: $white-color;
+			transition: 0.5s;
+			&::before{
+				display: none;
+			}
+			&::after{
+				display: none;
+			}
+		}
+	}
+}
