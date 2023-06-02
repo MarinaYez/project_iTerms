@@ -4,7 +4,7 @@ import DetailsOnline from './DetailsOnline';
 import DetailsSwiper from './DetailsSwiper';
 import DetailsProtection from './DetailsProtection';
 import DetailsBlog from './DetailsBlog';
-import './PrivPol.scss';
+import './PrivacyPolicy.scss';
 import { useTranslation } from 'react-i18next';
 
 import { Link } from 'react-router-dom';
